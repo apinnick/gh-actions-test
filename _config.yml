@@ -1,0 +1,16 @@
+title: "Avital's GH actions test repo"
+description: "Site to test setting up GH actions and Jekyll from scratch"
+type: website
+
+# Build settings
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  syntax_highlighter_opts:
+    css_class: 'highlight'
+    span:
+      line_numbers: false
+    block:
+      line_numbers: false
+      start_line: 1
