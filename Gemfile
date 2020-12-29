@@ -9,16 +9,24 @@ gem "asciidoctor"
 gem "bundle"
 gem "html-proofer"
 gem "jekyll-asciidoc"
+gem "jekyll-theme-minimal"
 gem "jekyll-feed"
 gem "jekyll-paginate"
 gem "jekyll-redirect-from"
 gem "jekyll-sitemap"
 gem "jekyll-tagging"
 gem 'jekyll-seo-tag'
-gem "jekyll", ">= 4.0.0"
+gem "jekyll", ">= 3.9.0"
 gem "premonition", ">= 4.0.0"
 gem "pygments.rb"
 gem "rake"
+gem "minima"
+
+gem "github-pages", group: :jekyll_plugins
+
+group :jekyll_plugins do
+  gem 'jekyll-asciidoc'
+end
 
 
 # gem "rails"

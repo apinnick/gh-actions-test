@@ -1,6 +1,8 @@
 ---
-title: index
+title: Documentation
+layout: default
+tags: [mtv, openshift virtualization, upstream, documentation]
 ---
-# Title
+# Documentation page
 
-Hello, world.
+This is a test.
