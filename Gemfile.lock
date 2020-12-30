@@ -330,7 +330,7 @@ DEPENDENCIES
   bundle
   github-pages
   html-proofer
-  jekyll (>= 3.9.0)
+  jekyll (>= 3.5)
   jekyll-asciidoc
   jekyll-feed
   jekyll-paginate

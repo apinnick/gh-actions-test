@@ -16,7 +16,7 @@ gem "jekyll-redirect-from"
 gem "jekyll-sitemap"
 gem "jekyll-tagging"
 gem 'jekyll-seo-tag'
-gem "jekyll", ">= 3.9.0"
+gem "jekyll", ">= 3.5"
 gem "premonition", ">= 4.0.0"
 gem "pygments.rb"
 gem "rake"
