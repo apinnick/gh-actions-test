@@ -20,6 +20,8 @@
 
 include::modules/mtv-attributes.adoc[]
 
+Note that attributes are not rendered unless they are in the header of the adoc file.
+
 [IMPORTANT]
 ====
 This is not a real document. It was thrown together to demonstrate an upstream/downstream workflow.
