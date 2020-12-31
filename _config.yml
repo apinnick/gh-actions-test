@@ -1,5 +1,5 @@
-title: "Avital's GH actions test repo"
-description: "Site to test setting up GH actions and Jekyll from scratch"
+title: "Avital's test repo for GH actions"
+description: "This repo is a demo for publishing Asciidoc files with GH actions and Jekyll."
 repository: apinnick/gh-actions-test
 baseurl: /gh-actions-test/
 

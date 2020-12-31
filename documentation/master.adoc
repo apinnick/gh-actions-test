@@ -13,7 +13,11 @@
 include::modules/mtv-attributes.adoc[]
 
 ifeval::["{build}" == "upstream"]
-Note that attributes are not rendered unless they are in the header of the adoc file.
+== Forklift documentation (upstream)
+
+This is the upstream documentation for Forklift.
+
+Attributes for the upstream documentation are set in the `_config.yml` file. GitHub cannot read attributes from an included attributes file.
 endif::[]
 
 [IMPORTANT]
