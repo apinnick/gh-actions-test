@@ -1,0 +1,75 @@
+---
+layout: post
+title:  "Forklift"
+---
+= Forklift (upstream)
+:page-layout: default
+:icons: font
+:page-title: Forklift (upstream)
+:imagesdir: images
+:vernum: 2.0-beta
+:toc: left
+:toclevels: 3
+:compat-mode:
+:build: upstream
+:context: forklift
+
+include::modules/mtv-attributes.adoc[]
+
+[IMPORTANT]
+====
+This is not a real document. It was thrown together to demonstrate an upstream/downstream workflow.
+====
+
+{project-first} enables you to migrate a large number of virtual machines from VMware vSphere to {virt}.
+
+You can download the VMware provider data collected by {project-short} and upload it to the Migration Analytics service on link:https://cloud.redhat.com/migrations/migration-analytics[cloud.redhat.com] for a detailed workload analysis report and migration recommendations.
+
+
+
+[id='installing-mtv_{context}']
+== Installing {project-full}
+
+You can install the {project-first} with the {virt} web console or from the CLI.
+
+Then you create a VMware Virtual Disk Development Kit (VDDK) image and add it to a config map. {project-short} uses VDDK to copy the source disks.
+
+include::modules/Installing-mtv-console.adoc[leveloffset=+2]
+include::modules/Installing-mtv-cli.adoc[leveloffset=+2]
+include::modules/Adding-vddk-to-mtv.adoc[leveloffset=+2]
+
+[id="migrating-virtual-machines_{context}"]
+== Migrating virtual machines
+
+[id='migrating-vms-web-console_{context}']
+=== Migrating virtual machines with the web console
+
+You can add providers, create network and storage mappings, and create and run a migration plan in the web console.
+
+[id="adding-providers_{context}"]
+==== Adding providers
+
+You must add the {virt} and VMware providers in the web console.
+
+include::modules/Adding-virt-provider.adoc[leveloffset=+4]
+include::modules/Adding-vmware-provider.adoc[leveloffset=+4]
+
+[id="creating-mappings_{context}"]
+==== Creating mappings
+
+You must create mappings to map the source and target networks and storage.
+
+include::modules/Creating-network-mapping.adoc[leveloffset=+4]
+include::modules/Creating-storage-mapping.adoc[leveloffset=+4]
+
+// include::modules/Creating-hooks.adoc[leveloffset=+2]
+include::modules/Creating-migration-plan.adoc[leveloffset=+3]
+include::modules/Running-migration-plan.adoc[leveloffset=+3]
+
+include::modules/Migrating-virtual-machines-cli.adoc[leveloffset=+2]
+
+[id='troubleshooting_{context}']
+== Troubleshooting
+
+include::modules/Collecting-logs.adoc[leveloffset=+2]
+include::modules/Known-issues.adoc[leveloffset=+2]
