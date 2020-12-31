@@ -1,7 +1,6 @@
 ---
 layout: default
 title:  "Forklift"
-permalink: /forklift
 ---
 = Forklift (upstream)
 :page-layout: default

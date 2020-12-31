@@ -7,4 +7,4 @@ tags: [mtv, openshift virtualization, upstream, documentation]
 
 This is a test.
 
-I added a document:  [Forklift](forklift)
+I added a document:  [Forklift](forklift.html)
