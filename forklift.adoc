@@ -18,7 +18,7 @@
 :ocp-short: OKE
 :context: forklift
 
-include::modules/mtv-attributes.adoc[]
+Doc attributes must be in header of this file. GitHub does not support including attributes file.
 
 [IMPORTANT]
 ====
