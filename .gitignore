@@ -1,7 +1,5 @@
 build/*
 */build/*
 documentation/build/*
-doc-Forklift/build/*
-public/build/*
 .jekyll-cache/*
 _site
