@@ -1,7 +1,7 @@
 
 #encoding: utf-8
-desc 'Generate Documentation of Baremetal-Deploy'
+desc 'Generate document'
 task :default do
     puts "Building"
-    sh "utils/build-jekyll.sh"
+    sh "utils/build.sh"
 end
