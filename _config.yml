@@ -1,7 +1,7 @@
 title: "Avital's GH actions test repo"
 description: "Site to test setting up GH actions and Jekyll from scratch"
 repository: apinnick/gh-actions-test
-baseurl: /gh-actions-test/public
+baseurl: /gh-actions-test/
 
 # docdir: documentation
 type: website
@@ -11,8 +11,6 @@ plugins: [jekyll-asciidoc, jekyll-paginate, jekyll-redirect-from, jekyll-feed, j
 # Build settings
 markdown: kramdown
 theme: jekyll-theme-minimal
-
-
 
 asciidoc: {}
 asciidoctor:
