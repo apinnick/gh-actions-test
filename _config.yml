@@ -16,6 +16,16 @@ asciidoc: {}
 asciidoctor:
   attributes:
   - showtitle=@
+  - build=upstream
+  - project-short=Forklift
+  - project-full=Forklift
+  - project-first=Forklift
+  - project-version=2.0
+  - virt=KubeVirt
+  - ocp=OpenShift{nbsp}Kubernetes{nbsp}Engine
+  - ocp-version=4.6
+  - ocp-short=OKE
+  - context=forklift
   safe: unsafe
 
 kramdown:

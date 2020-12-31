@@ -1,4 +1,4 @@
-= Forklift (upstream)
+= Migration Toolkit for Virtualization
 :page-layout: default
 :icons: font
 :page-title: Forklift (upstream)
@@ -7,20 +7,14 @@
 :toc: left
 :toclevels: 3
 :compat-mode:
-:build: upstream
-:project-short: Forklift
-:project-full: Forklift
-:project-first: Forklift
-:project-version: 2.0
-:virt: KubeVirt
-:ocp: OpenShift{nbsp}Kubernetes{nbsp}Engine
-:ocp-version: 4.6
-:ocp-short: OKE
-:context: forklift
+:build: downstream
+:context: mtv
 
 include::modules/mtv-attributes.adoc[]
 
+ifeval::["{build}" == "upstream"]
 Note that attributes are not rendered unless they are in the header of the adoc file.
+endif::[]
 
 [IMPORTANT]
 ====
