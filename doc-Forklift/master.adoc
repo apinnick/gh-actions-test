@@ -8,6 +8,14 @@
 :toclevels: 3
 :compat-mode:
 :build: upstream
+:project-short: Forklift
+:project-full: Forklift
+:project-first: Forklift
+:project-version: 2.0
+:virt: KubeVirt
+:ocp: OpenShift{nbsp}Kubernetes{nbsp}Engine
+:ocp-version: 4.6
+:ocp-short: OKE
 :context: forklift
 
 include::modules/mtv-attributes.adoc[]

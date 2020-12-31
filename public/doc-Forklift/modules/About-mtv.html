@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta name="google-site-verification" content="RUElhd5171Z1GQ5VA3nhWfpeXj4CnaYhbb4bRj1E75w" />
+    <meta name="yandex-verification" content="650ce1b8e197bbb8" />
+    <meta charset="UTF-8">
+    <script src="//use.fontawesome.com/releases/v5.1.0/js/all.js" integrity="sha384-3LK/3kTpDE/Pkp8gTNp2gR/2gOiwQ6QaO7Td0zV76UFJVhqLl4Vl3KL1We6q6wR9" crossorigin="anonymous"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Avital's GH actions test repo</title>
+    <!-- # Opengraph protocol properties: https://ogp.me/ -->
+    <meta name="author" content="The Avital's GH actions test repo website team, " >
+    
+    <meta name="twitter:card" content="summary">
+    <meta name="keywords" content="" >
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="">
+    <meta property="og:article:author" content="The Avital's GH actions test repo website team" >
+    <meta property="og:article:published_time" content="2020-12-31 14:24:40 +0200" >
+    <meta name="twitter:title" content="Avital's GH actions test repo">
+    <meta name="twitter:description" content="Site to test setting up GH actions and Jekyll from scratch">
+
+
+<!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Avital’s GH actions test repo | Site to test setting up GH actions and Jekyll from scratch</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Avital’s GH actions test repo" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Site to test setting up GH actions and Jekyll from scratch" />
+<meta property="og:description" content="Site to test setting up GH actions and Jekyll from scratch" />
+<meta property="og:site_name" content="Avital’s GH actions test repo" />
+<script type="application/ld+json">
+{"description":"Site to test setting up GH actions and Jekyll from scratch","@type":"WebPage","headline":"Avital’s GH actions test repo","url":"/gh-actions-test/public/doc-Forklift/modules/About-mtv.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/gh-actions-test/public/assets/css/style.css">
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        
+
+        <h1><a href="/gh-actions-test/public/">Avital's GH actions test repo</a></h1>
+
+        <p>Site to test setting up GH actions and Jekyll from scratch</p>
+
+        
+        <p class="view"><a href="https://github.com/apinnick/gh-actions-test">View the Project on GitHub <small>apinnick/gh-actions-test</small></a></p>
+        
+
+        
+
+        
+      </header>
+      <section>
+
+      <div class="paragraph">
+<p>IN PROGRESS</p>
+</div>
+<div class="paragraph">
+<p>Placeholder for diagram</p>
+</div>
+<div class="paragraph">
+<div class="title">Custom resources</div>
+<p>{project-short} creates the following custom resources (CRs):</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Provider</code>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Created when you add a source or target provider</p>
+</li>
+<li>
+<p>Stores provider attributes in order to connect to and interact with the providers</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><code>Plan</code>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Created when you create a migration plan</p>
+</li>
+<li>
+<p>Contains a list of VMs that are migrated together with the same migration parameters</p>
+</li>
+<li>
+<p>Selects VMs to fit the available migration resources until all VMs are migrated</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><code>Mapping</code>: Created when you map source and target networks or source and target storage</p>
+</li>
+<li>
+<p><code>Migration</code>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Created when you run a migration plan</p>
+</li>
+<li>
+<p>Aggregates the migration progress</p>
+<div class="paragraph">
+<p>If a virtual machine fails to migrate, you can run a new migration with the same migration plan. Only the virtual machines that have not migrated will be migrated.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<div class="title">Services</div>
+<p>{project-short} creates the following services:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Provider Inventory:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Connects to the source and target providers</p>
+</li>
+<li>
+<p>Maintains a local inventory for mappings and plans</p>
+</li>
+<li>
+<p>Separate provider inventory pods for each provider enable scalability</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Validation:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Validates the suitability of a VM for migration to {virt} by applying rules</p>
+</li>
+<li>
+<p>Triggered by the Provider Inventory service whenever a VM configuration change is detected</p>
+</li>
+<li>
+<p>Stores the VM validation status</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>User Interface:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Enables you to manipulate the {project-short} CRs</p>
+</li>
+<li>
+<p>Indicates the state of the CRs</p>
+</li>
+<li>
+<p>Displays the progress of a migration</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Controller: Implements the logic to reconcile the CRs with the state defined by the user</p>
+<div class="paragraph">
+<p>For example, when you create a Plan, the controllers validate it and add a status label. If a Plan fails validation, its status is <code>Not ready</code> and the Plan cannot be used to perform a migration.</p>
+</div>
+</li>
+<li>
+<p>Aggregates the status of related CRs to provide a holistic and consistent view of the state of a migration</p>
+</li>
+</ul>
+</div>
+
+      </section>
+      <footer>
+        
+        <p>This project is maintained by <a href="https://github.com/apinnick">apinnick</a></p>
+        
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="/gh-actions-test/public/assets/js/scale.fix.js"></script>
+    
+  </body>
+</html>

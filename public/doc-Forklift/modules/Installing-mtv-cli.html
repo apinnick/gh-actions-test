@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta name="google-site-verification" content="RUElhd5171Z1GQ5VA3nhWfpeXj4CnaYhbb4bRj1E75w" />
+    <meta name="yandex-verification" content="650ce1b8e197bbb8" />
+    <meta charset="UTF-8">
+    <script src="//use.fontawesome.com/releases/v5.1.0/js/all.js" integrity="sha384-3LK/3kTpDE/Pkp8gTNp2gR/2gOiwQ6QaO7Td0zV76UFJVhqLl4Vl3KL1We6q6wR9" crossorigin="anonymous"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Avital's GH actions test repo</title>
+    <!-- # Opengraph protocol properties: https://ogp.me/ -->
+    <meta name="author" content="The Avital's GH actions test repo website team, " >
+    
+    <meta name="twitter:card" content="summary">
+    <meta name="keywords" content="" >
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="">
+    <meta property="og:article:author" content="The Avital's GH actions test repo website team" >
+    <meta property="og:article:published_time" content="2020-12-31 14:24:40 +0200" >
+    <meta name="twitter:title" content="Avital's GH actions test repo">
+    <meta name="twitter:description" content="Site to test setting up GH actions and Jekyll from scratch">
+
+
+<!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Avital’s GH actions test repo | Site to test setting up GH actions and Jekyll from scratch</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Avital’s GH actions test repo" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Site to test setting up GH actions and Jekyll from scratch" />
+<meta property="og:description" content="Site to test setting up GH actions and Jekyll from scratch" />
+<meta property="og:site_name" content="Avital’s GH actions test repo" />
+<script type="application/ld+json">
+{"description":"Site to test setting up GH actions and Jekyll from scratch","@type":"WebPage","headline":"Avital’s GH actions test repo","url":"/gh-actions-test/public/doc-Forklift/modules/Installing-mtv-cli.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/gh-actions-test/public/assets/css/style.css">
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        
+
+        <h1><a href="/gh-actions-test/public/">Avital's GH actions test repo</a></h1>
+
+        <p>Site to test setting up GH actions and Jekyll from scratch</p>
+
+        
+        <p class="view"><a href="https://github.com/apinnick/gh-actions-test">View the Project on GitHub <small>apinnick/gh-actions-test</small></a></p>
+        
+
+        
+
+        
+      </header>
+      <section>
+
+      <div class="paragraph">
+<p>You can install the {project-full} from the CLI.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p><a href="https://docs.openshift.com/container-platform/{ocp-version}/cli_reference/openshift_cli/getting-started-cli.html">OpenShift CLI</a> installed</p>
+</li>
+<li>
+<p><code>cluster-admin</code> privileges</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Log in to the {ocp} cluster and create an <code>openshift-migration</code> project:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ cat &lt;&lt; EOF | oc apply -f -
+---
+apiVersion: project.openshift.io/v1
+kind: Project
+metadata:
+  name: openshift-migration
+EOF</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Create an <code>OperatorGroup</code> object called <code>migration</code>:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ cat &lt;&lt; EOF | oc apply -f -
+---
+apiVersion: operators.coreos.com/v1
+kind: OperatorGroup
+metadata:
+  name: migration
+  namespace: openshift-migration
+spec:
+  targetNamespaces:
+    - openshift-migration
+EOF</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Create a <code>Subscription</code> object for the <code>virt-operator</code>:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ cat &lt;&lt; EOF | oc apply -f -
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: Subscription
+metadata:
+  name: virt-operator
+  namespace: openshift-migration
+spec:
+  channel: development
+  installPlanApproval: Automatic
+  name: virt-operator
+  source: konveyor-for-vms
+  sourceNamespace: openshift-marketplace
+  startingCSV: "konveyor-virt-operator.v99.0.0"
+EOF</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Create a <code>VirtController</code> object:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ cat &lt;&lt; EOF | oc apply -f -
+---
+apiVersion: virt.konveyor.io/v1alpha1
+kind: VirtController
+metadata:
+  name: virt-controller
+  namespace: openshift-migration
+spec:
+  olm_managed: true
+EOF</code></pre>
+</div>
+</div>
+</li>
+<li>
+<p>View the resources created by the <code>VirtController</code> object:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-terminal" data-lang="terminal">$ oc get pods -n openshift-migration</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example output</div>
+<div class="content">
+<pre>TBD</pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+
+      </section>
+      <footer>
+        
+        <p>This project is maintained by <a href="https://github.com/apinnick">apinnick</a></p>
+        
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="/gh-actions-test/public/assets/js/scale.fix.js"></script>
+    
+  </body>
+</html>
