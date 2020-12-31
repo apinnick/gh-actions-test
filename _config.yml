@@ -16,7 +16,6 @@ asciidoc: {}
 asciidoctor:
   attributes:
   - showtitle=@
-  base_dir: public/
   safe: unsafe
 
 kramdown:

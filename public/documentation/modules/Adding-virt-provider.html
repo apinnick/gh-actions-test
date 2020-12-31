@@ -17,7 +17,7 @@
     <meta property="og:type" content="website">
     <meta property="og:image" content="">
     <meta property="og:article:author" content="The Avital's GH actions test repo website team" >
-    <meta property="og:article:published_time" content="2020-12-31 14:39:25 +0200" >
+    <meta property="og:article:published_time" content="2020-12-31 14:49:52 +0200" >
     <meta name="twitter:title" content="Avital's GH actions test repo">
     <meta name="twitter:description" content="Site to test setting up GH actions and Jekyll from scratch">
 
@@ -31,10 +31,10 @@
 <meta property="og:description" content="Site to test setting up GH actions and Jekyll from scratch" />
 <meta property="og:site_name" content="Avital’s GH actions test repo" />
 <script type="application/ld+json">
-{"description":"Site to test setting up GH actions and Jekyll from scratch","@type":"WebPage","headline":"Avital’s GH actions test repo","url":"/gh-actions-test/public/doc-Forklift/modules/Upgrading-mtv.html","@context":"https://schema.org"}</script>
+{"description":"Site to test setting up GH actions and Jekyll from scratch","@type":"WebPage","headline":"Avital’s GH actions test repo","url":"/gh-actions-test/documentation/modules/Adding-virt-provider.html","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
-    <link rel="stylesheet" href="/gh-actions-test/public/assets/css/style.css">
+    <link rel="stylesheet" href="/gh-actions-test/assets/css/style.css">
     <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
@@ -44,7 +44,7 @@
       <header>
         
 
-        <h1><a href="/gh-actions-test/public/">Avital's GH actions test repo</a></h1>
+        <h1><a href="/gh-actions-test/">Avital's GH actions test repo</a></h1>
 
         <p>Site to test setting up GH actions and Jekyll from scratch</p>
 
@@ -58,8 +58,53 @@
       </header>
       <section>
 
-      <div class="paragraph">
-<p>TBD</p>
+      <h1 id="adding-virt-provider_{context}">Adding the {virt} provider</h1>
+<div class="paragraph">
+<p>You can add the {virt} provider in the {mtv-short} web console.</p>
+</div>
+<div class="ulist">
+<div class="title">Prerequisites</div>
+<ul>
+<li>
+<p><a href="https://docs.openshift.com/container-platform/{ocp-version}/authentication/using-service-accounts-in-applications.html"><code>VirtController</code> service account token</a></p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>In the web console, navigate to <strong>Providers</strong> and click <strong>Add provider</strong>.</p>
+</li>
+<li>
+<p>Select <strong>{virt}</strong> from the <strong>Type</strong> list.</p>
+</li>
+<li>
+<p>Fill in the following fields:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Cluster name</strong>: OpenShift cluster name to display in the list of providers</p>
+</li>
+<li>
+<p><strong>URL</strong>: OpenShift cluster API endpoint</p>
+</li>
+<li>
+<p><strong>Service account token</strong>: VirtController service account token</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Click <strong>Check connection</strong> to verify the credentials.</p>
+</li>
+<li>
+<p>Click <strong>Add</strong> to add and save the provider.</p>
+<div class="paragraph">
+<p>The provider appears in the list of providers.</p>
+</div>
+</li>
+</ol>
 </div>
 
       </section>
@@ -70,7 +115,7 @@
         <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
       </footer>
     </div>
-    <script src="/gh-actions-test/public/assets/js/scale.fix.js"></script>
+    <script src="/gh-actions-test/assets/js/scale.fix.js"></script>
     
   </body>
 </html>

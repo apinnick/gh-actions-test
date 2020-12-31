@@ -17,7 +17,7 @@
     <meta property="og:type" content="website">
     <meta property="og:image" content="">
     <meta property="og:article:author" content="The Avital's GH actions test repo website team" >
-    <meta property="og:article:published_time" content="2020-12-31 14:39:25 +0200" >
+    <meta property="og:article:published_time" content="2020-12-31 14:49:52 +0200" >
     <meta name="twitter:title" content="Avital's GH actions test repo">
     <meta name="twitter:description" content="Site to test setting up GH actions and Jekyll from scratch">
 
@@ -31,10 +31,10 @@
 <meta property="og:description" content="Site to test setting up GH actions and Jekyll from scratch" />
 <meta property="og:site_name" content="Avital’s GH actions test repo" />
 <script type="application/ld+json">
-{"description":"Site to test setting up GH actions and Jekyll from scratch","@type":"WebPage","headline":"Avital’s GH actions test repo","url":"/gh-actions-test/public/doc-Forklift/modules/Adding-provider.html","@context":"https://schema.org"}</script>
+{"description":"Site to test setting up GH actions and Jekyll from scratch","@type":"WebPage","headline":"Avital’s GH actions test repo","url":"/gh-actions-test/documentation/modules/Creating-hooks.html","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
-    <link rel="stylesheet" href="/gh-actions-test/public/assets/css/style.css">
+    <link rel="stylesheet" href="/gh-actions-test/assets/css/style.css">
     <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
@@ -44,7 +44,7 @@
       <header>
         
 
-        <h1><a href="/gh-actions-test/public/">Avital's GH actions test repo</a></h1>
+        <h1><a href="/gh-actions-test/">Avital's GH actions test repo</a></h1>
 
         <p>Site to test setting up GH actions and Jekyll from scratch</p>
 
@@ -58,19 +58,35 @@
       </header>
       <section>
 
-      <div id="adding-provider_{context}" class="olist arabic">
-<div class="title">Procedure</div>
+      <h1 id="creating-hooks_{context}">Creating hooks</h1>
+<div class="paragraph">
+<p>Hooks are commands that you can run on the target cluster at certain stages of the migration.</p>
+</div>
+<div class="paragraph">
+<p>You can define a hook by using an Ansible playbook or a container image.</p>
+</div>
+<div class="paragraph">
+<p>You can create a hook before a migration plan or while creating a migration plan.</p>
+</div>
+<h2 id="procedure" class="discrete">Procedure</h2>
+<div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>In the web console, navigate to <strong>Providers</strong> and click <strong>Add provider</strong>.</p>
+<p>In the web console, navigate to <strong>Hooks</strong> and click <strong>Create hook</strong>.</p>
 </li>
 <li>
-<p>Click <strong>Check connection</strong> to verify the credentials.</p>
+<p>Specify the hook <strong>Name</strong>.</p>
 </li>
 <li>
-<p>Click <strong>Add</strong> to add and save the provider.</p>
+<p>Select <strong>Ansible playbook</strong> or <strong>Custom container image</strong> as the <strong>Hook definition</strong>.</p>
+</li>
+<li>
+<p>If you select <strong>Custom container image</strong>, specify the image location, for example, <code>quay.io/github_project/container_name:container_id</code>.</p>
+</li>
+<li>
+<p>Select a migration step and click <strong>Add</strong>.</p>
 <div class="paragraph">
-<p>The provider appears in the list of providers.</p>
+<p>The new migration hook appears in the <strong>Hooks</strong> list.</p>
 </div>
 </li>
 </ol>
@@ -84,7 +100,7 @@
         <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
       </footer>
     </div>
-    <script src="/gh-actions-test/public/assets/js/scale.fix.js"></script>
+    <script src="/gh-actions-test/assets/js/scale.fix.js"></script>
     
   </body>
 </html>

@@ -1,1 +1,1 @@
-Sitemap: /gh-actions-test/public/sitemap.xml
+Sitemap: /gh-actions-test/sitemap.xml
