@@ -1,0 +1,10 @@
+# Documentation page
+:page-layout: default
+
+This is a test.
+
+I added a document: link:forklift[Forklift]
+
+And a link:sample[sample].
+
+And a link:sample2[sample2].

@@ -1,18 +1,7 @@
----
-layout: default
-title:  "Forklift"
----
 = Forklift (upstream)
 :page-layout: default
+:permalink: /forklift/
 :icons: font
-:page-title: Forklift (upstream)
-:imagesdir: images
-:vernum: 2.0-beta
-:toc: left
-:toclevels: 3
-:compat-mode:
-:build: upstream
-:context: forklift
 
 include::modules/mtv-attributes.adoc[]
 
@@ -24,8 +13,6 @@ This is not a real document. It was thrown together to demonstrate an upstream/d
 {project-first} enables you to migrate a large number of virtual machines from VMware vSphere to {virt}.
 
 You can download the VMware provider data collected by {project-short} and upload it to the Migration Analytics service on link:https://cloud.redhat.com/migrations/migration-analytics[cloud.redhat.com] for a detailed workload analysis report and migration recommendations.
-
-
 
 [id='installing-mtv_{context}']
 == Installing {project-full}
