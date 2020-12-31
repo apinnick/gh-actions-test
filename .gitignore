@@ -1,7 +1,7 @@
 build/*
 */build/*
 documentation/build/*
-documentation/doc-Migration_Toolkit_for_Virtualization/build/*
+doc-Forklift/build/*
+public/build/*
 .jekyll-cache/*
 _site
-website/*
