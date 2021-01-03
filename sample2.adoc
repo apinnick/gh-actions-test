@@ -1,5 +1,0 @@
-= Sample page 2
-:page-layout: default
-:page-permalink: /sample2/
-
-Hello world.
