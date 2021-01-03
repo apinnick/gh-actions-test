@@ -1,9 +1,17 @@
-title: "Avital's test repo for GH actions"
-description: "This repo is a demo for publishing Asciidoc files with GH actions and Jekyll."
+# Site settings
+title: "Avital's repo for GitHub actions"
+description: "This repo is a demo for publishing Asciidoc files with GitHub actions and a Jekyll theme."
 repository: apinnick/gh-actions-test
 baseurl: /gh-actions-test/
 
-# docdir: documentation
+# For site logo
+defaults:
+  - scope:
+      path: "assets/img"
+    values:
+      image: true
+logo: "/assets/img/forklift-logo-lightbg.svg"
+
 type: website
 
 plugins: [jekyll-asciidoc, jekyll-paginate, jekyll-redirect-from, jekyll-feed, jekyll-sitemap, premonition, jekyll/tagging, jekyll-seo-tag]
@@ -12,7 +20,9 @@ plugins: [jekyll-asciidoc, jekyll-paginate, jekyll-redirect-from, jekyll-feed, j
 markdown: kramdown
 theme: jekyll-theme-minimal
 
+# empty array for asciidoc
 asciidoc: {}
+# upstream doc attributes
 asciidoctor:
   attributes:
   - showtitle=@

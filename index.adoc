@@ -1,10 +1,8 @@
 # Documentation page
 :page-layout: default
 
-This is a test.
+This is a demo site for GitHub actions and Jekyll themes.
 
-I added a document: link:documentation/master.html[Forklift]
+Forklift is an upstream project for migrating virtual machines from VMware to Red Hat OpenShift Virtualization. The downstream project is Migration Toolkit for Virtualization (not yet released).
 
-And a link:sample[sample].
-
-And a link:sample2[sample2].
+The link:documentation/master.html[Forklift documentation] is built with the `jekyll-asciidoc` plugin and published to GitHub pages with a GitHub action.
